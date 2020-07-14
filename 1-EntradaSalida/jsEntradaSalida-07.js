@@ -8,9 +8,15 @@ ej.: "la Resta es 750"*/
 	{	var primerNumero; 
 		var segundoNumero;
 		var resultadoSuma;
-			primerNumero =parseInt(txtIdNumeroUno.value);
-			segundoNumero =parseInt(txtIdNumeroDos.value);
+
+			primerNumero=txtIdNumeroUno.value;
+			segundoNumero=txtIdNumeroDos.value;
+
+			primerNumero=parseInt(primerNumero);
+			segundoNumero =parseInt(segundoNumero);
+
 			resultadoSuma=(primerNumero + segundoNumero);
+
 					alert("La suma es "+resultadoSuma);
 	}
 
@@ -19,9 +25,14 @@ ej.: "la Resta es 750"*/
 		var primerNumero; 
 		var segundoNumero;
 		var resultadoResta;
-			primerNumero =parseInt(txtIdNumeroUno.value);
-			segundoNumero =parseInt(txtIdNumeroDos.value);
+
+			primerNumero=txtIdNumeroUno.value;
+			segundoNumero=txtIdNumeroDos.value;
+
+			primerNumero =parseInt(primerNumero);
+			segundoNumero =parseInt(segundoNumero);
 			resultadoResta=(primerNumero - segundoNumero);
+
 					alert("La resta es "+ resultadoResta);
 	
 	}
@@ -31,8 +42,12 @@ ej.: "la Resta es 750"*/
 		var primerNumero; 
 		var segundoNumero;
 		var resultadoMultiplicar;
-			primerNumero =parseInt(txtIdNumeroUno.value);
-			segundoNumero =parseInt(txtIdNumeroDos.value);
+
+			primerNumero=txtIdNumeroUno.value;
+			segundoNumero=txtIdNumeroDos.value;
+
+			primerNumero =parseInt(primerNumero);
+			segundoNumero =parseInt(segundoNumero);
 			resultadoMultiplicar=(primerNumero * segundoNumero);
 					alert("La multiplicacion es" + resultadoMultiplicar);
 	
@@ -43,10 +58,14 @@ ej.: "la Resta es 750"*/
 		var primerNumero; 
 		var segundoNumero;
 		var resultadoDividir;
-			primerNumero =parseInt(txtIdNumeroUno.value);
-			segundoNumero =parseInt(txtIdNumeroDos.value);
-			resultadoDividir=(primerNumero / segundoNumero);
-					alert("La division es" + resultadoDividir);
-	};
 
-	// hay alguna manera de hacer variables globales? para no tenes que estar nombrandolas en cada termino
+			primerNumero=txtIdNumeroUno.value;
+			segundoNumero=txtIdNumeroDos.value;
+
+			primerNumero =parseInt(primerNumero);
+			segundoNumero =parseInt(segundoNumero);
+			
+			resultadoDividir=(primerNumero / segundoNumero);
+
+					alert("La division es" + resultadoDividir);
+	}

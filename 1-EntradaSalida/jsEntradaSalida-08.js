@@ -8,8 +8,14 @@ function SacarResto()
 	var dividendo; 
 	var divisor;
 	var resto;
-		dividendo =parseInt(txtIdNumeroDividendo.value);
-		divisor =parseInt(txtIdNumeroDivisor.value);
-		resto=(dividendo / divisor);
-					alert("El resto es  "+ resto);
+
+		dividendo=txtIdNumeroDividendo.value;
+		divisor=txtIdNumeroDivisor.value;
+
+		dividendo=parseInt(dividendo);
+		divisor=parseInt(divisor);
+
+		resto=dividendo % divisor;
+
+		alert("El resto de "+dividendo+" y "+divisor+" es "+ resto);
 }
