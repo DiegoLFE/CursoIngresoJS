@@ -7,11 +7,15 @@ function mostrarAumento()
 {
 	var importe;
 	var descuento;
+	var resultado;
 
-		importe=document.getElementById("txtIdImporte".value);
+		importe= txtIdImporte.value;
 		importe=parseInt(importe);
 
-		descuento=importe*0.75;
+		descuento= importe*25/100;
+		resultado = importe-descuento;
 
-		txtIdResultado.value = descuento;
+		txtIdResultado.value = resultado;
+		//descuento=importe*0.75;
+		//txtIdResultado.value = descuento;
 }
