@@ -4,15 +4,17 @@ function mostrar()
 	var estadoCivil;
 		 edad=document.getElementById("txtIdEdad").value;
 		 estadoCivil=document.getElementById("estadoCivil").value;
-		 if (edad<18&&estadoCivil!="Soltero")	
-		 {
+		 
+		if (edad<18&&estadoCivil!="Soltero")	
+		{
 		//NO HACER NADA
-		 }	
-		 else {
-			if (edad>=18&&estadoCivil=="Soltero"){
-				alert("Es soltero y no es menor.")
-			}
-
+		}	
+		 else 
+		{
+			if (edad>17&&estadoCivil=="Soltero")
+			{
+				alert("Es soltero y no es menor.");
+			} 
 		}
 }
 /*Al ingresar una edad menor a 18 años y un estado civil distinto a "Soltero", NO HACER NADA,
