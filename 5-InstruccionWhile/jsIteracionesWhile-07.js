@@ -9,7 +9,24 @@ function mostrar()
 	var respuesta;
 	contador=0;
 	acumulador=0;
-	respuesta='si';
+	respuesta=true;
+
+	while (respuesta==true) 
+	{
+
+
+
+		numeroIngresado=prompt("ingrese un numero: ");
+		numeroIngresado=parseInt(numeroIngresado);
+		acumulador=acumulador+numeroIngresado;
+	//	acumulador+=numeroIngresado;
+		contador++;
+
+
+		respuesta=confirm("¿desea ingresar otro numero?");
+	}
+
+
 
 
 	txtIdSuma.value=acumulador;

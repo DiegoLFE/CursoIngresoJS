@@ -23,66 +23,72 @@ function CalcularPrecio ()
     var ingresoBruto;
     var porcentaje;
 
-        cantidadLamparas=document.getElementById("txtIdCantidad").value;
-        marca=document.getElementById("Marca").value;
 
-        precioUnitario=35;
-        precioLamparas=cantidadLamparas*precioUnitario;
-        porcentaje=0;
+    cantidadLamparas=document.getElementById("txtIdCantidad").value;
+    marca=document.getElementById("Marca").value;
+
+    precioUnitario=35;
+    precioLamparas=cantidadLamparas*precioUnitario;
+    cantidadLamparas=parseInt(cantidadLamparas);
 
 
-        switch (cantidadLamparas) {
+    switch (cantidadLamparas) 
+    {
             case 1:
             case 2:
-                precioFinal=precioLamparas;
-                break;
+                porcentaje=0;
+            break;
             case 3:
                 switch (marca) {
                     case "ArgentinaLuz":
-                        aplicarDescuento=precioLamparas*0.15;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
+                        porcentaje=15;
+                    break;
                     case "FelipeLamparas":
-                        aplicarDescuento=precioLamparas*0.10;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
-                
+                        porcentaje=10;
+                    break;
                     default:
-                        aplicarDescuento=precioLamparas*0.05;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
+                        porcentaje=5;
+                    break;
                 }
             break;
             case 4:
                 switch (marca) {
                     case "ArgentinaLuz":
                     case "FelipeLamparas":   
-                        aplicarDescuento=precioLamparas*0.25;
-                        precioFinal=precioLamparas-aplicarDescuento;                     
-                        break;
+                        porcentaje=25;                    
+                    break;
                     default:
-                        aplicarDescuento=precioLamparas*0.20;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
+                        porcentaje=20;
+                    break;
                 }
             break;
             case 5:
                 switch (marca) {
                     case "ArgentinaLuz":
-                        aplicarDescuento=precioLamparas*0.40;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
-                
+                        porcentaje=40;
+                    break;               
                     default:
-                        aplicarDescuento=precioLamparas*0.30;
-                        precioFinal=precioLamparas-aplicarDescuento;
-                        break;
+                        porcentaje=30;
+                    break;
                 }
             break;
             default:
-                precioFinal=precioLamparas/2;
+                porcentaje=50;
             break;
         }
+
+        aplicarDescuento=precioLamparas*porcentaje/100;
+        precioFinal=precioLamparas-aplicarDescuento;
+
+        if (precioFinal>120) 
+        {
+            ingresoBruto=precioFinal*0.10;
+            precioFinal=precioFinal+ingresoBruto;
+            alert("Usted pago " +ingresoBruto+ " de IIBB.");
+        }
+        document.getElementById("txtIdprecioDescuento").value=precioFinal;
+
+}       
 
         /*
         if (cantidadLamparas>5) 
@@ -139,12 +145,3 @@ function CalcularPrecio ()
             }
         }
          */
-        if (precioFinal>120) 
-        {
-            ingresoBruto=precioFinal*0.10;
-            precioFinal=precioFinal+ingresoBruto;
-            alert("Usted pago " +ingresoBruto+ " de IIBB.");
-        }
-        document.getElementById("txtIdprecioDescuento").value=precioFinal;
-
-}       
